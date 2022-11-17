@@ -1,0 +1,224 @@
+{
+    "Products": [
+        {
+            "id": 1,
+            "name": "Silla de oficina",
+            "quantity": 1,
+            "group": "Productos del hogar",
+            "unitprice": 2000,
+            "price": 2000
+        },
+    
+        {
+            "id": 2,
+            "name": "Lámpara de escritorio",
+            "quantity": 1,
+            "group": "Productos del hogar",
+            "unitprice": 1000,
+            "price": 1000
+        },
+    
+        {
+            "id": 3,
+            "name": "Litera",
+            "quantity": 1,
+            "group": "Productos del hogar",
+            "unitprice": 5500,
+            "price": 5500
+        },
+    
+        {
+            "id": 4,
+            "name": "Silla gamer",
+            "quantity": 1,
+            "group": "Productos del hogar",
+            "unitprice": 1000,
+            "price": 1000
+        },
+    
+        {
+            "id": 5,
+            "name": "Mueble",
+            "quantity": 1,
+            "group": "Productos del hogar",
+            "unitprice": 1500,
+            "price": 1500
+        },
+    
+        {
+            "id": 6,
+            "name": "Juego de comedor",
+            "quantity": 1,
+            "group": "Productos del hogar",
+            "unitprice": 2500,
+            "price": 2500
+        },
+    
+        {
+            "id": 7,
+            "name": "Estantería",
+            "quantity": 1,
+            "group": "Productos del hogar",
+            "unitprice": 3500,
+            "price": 3500
+        },
+    
+        {
+            "id": 8,
+            "name": "Closet",
+            "quantity": 1,
+            "group": "Productos del hogar",
+            "unitprice": 5000,
+            "price": 5000
+        },
+    
+
+    
+        {
+            "id": 9,
+            "name": "Licuadora",
+            "quantity": 1,
+            "group": "Cocina",
+            "unitprice": 2000,
+            "price": 2000
+        },
+    
+        {
+            "id": 10,
+            "name": "Microondas",
+            "quantity": 1,
+            "group": "Cocina",
+            "unitprice": 3400,
+            "price": 3400
+        },
+    
+        {
+            "id": 11,
+            "name": "Horno",
+            "quantity": 1,
+            "group": "Cocina",
+            "unitprice": 2300,
+            "price": 2300
+        },
+    
+        {
+            "id": 12,
+            "name": "Juego de cubiertos",
+            "quantity": 1,
+            "group": "Cocina",
+            "unitprice": 1600,
+            "price": 1600
+    
+        },
+    
+        {
+            "id": 13,
+            "name": "Juego de utensilios",
+            "quantity": 1,
+            "group": "Cocina",
+            "unitprice": 4700,
+            "price": 4700
+        },
+    
+        {
+            "id": 14,
+            "name": "Batidora",
+            "quantity": 1,
+            "group": "Cocina",
+            "unitprice": 6400,
+            "price": 6400
+        },
+    
+        {
+            "id": 15,
+            "name": "Cafetera",
+            "quantity": 1,
+            "group": "Cocina",
+            "unitprice": 5400,
+            "price": 5400
+        },
+    
+        {
+            "id": 16,
+            "name": "Mortero de marmol",
+            "quantity": 1,
+            "group": "Cocina",
+            "unitprice": 6000,
+            "price": 6000
+        },
+    
+
+    
+        {
+            "id": 17,
+            "name": "Audífonos Inalámbricos",
+            "quantity": 1,
+            "group": "Electrodomesticos",
+            "unitprice": 2000,
+            "price": 2000
+        },
+    
+        {
+            "id": 18,
+            "name": "Regleta",
+            "quantity": 1,
+            "group": "Electrodomesticos",
+            "unitprice": 3400,
+            "price": 3400
+        },
+    
+        {
+            "id": 19,
+            "name": "Audífonos",
+            "quantity": 1,
+            "group": "Electrodomesticos",
+            "unitprice": 2200,
+            "price": 2200
+        },
+    
+        {
+            "id": 20,
+            "name": "Aro De Luz Led",
+            "quantity": 1,
+            "group": "Electrodomesticos",
+            "unitprice": 1600,
+            "price": 1600
+        },
+    
+        {
+            "id": 21,
+            "name": "Joystick",
+            "quantity": 1,
+            "group": "Electrodomesticos",
+            "unitprice": 4700,
+            "price": 4700
+        },
+    
+        {
+            "id": 22,
+            "name": "Cornetas",
+            "quantity": 1,
+            "group": "Electrodomesticos",
+            "unitprice": 6400,
+            "price": 6400
+        },
+    
+        {
+            "id": 23,
+            "name": "Batería Portátil",
+            "quantity": 1,
+            "group": "Electrodomesticos",
+            "unitprice": 5400,
+            "price": 5400
+        },
+    
+        {
+            "id": 24,
+            "name": "Reloj inteligente", 
+            "quantity": 1,
+            "group": "Electrodomesticos",
+            "unitprice": 6000,
+            "price": 6000
+        }
+    ]
+}
