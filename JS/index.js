@@ -339,3 +339,79 @@ function ClickTrash(idProduct){
     })
 }
 //==============={ 𝐂𝐥𝐢𝐜𝐤 𝐚 𝐥𝐨𝐬 𝐛𝐨𝐭𝐨𝐧𝐞𝐬 𝐝𝐞 𝐒𝐡𝐨𝐩𝐩𝐢𝐧𝐠𝐂𝐚𝐫𝐭 }===============
+
+
+
+//==============={ 𝐁𝐨𝐭𝐨𝐧𝐞𝐬 𝐝𝐞 𝐞𝐧𝐯𝐢𝐚𝐫 𝐲 𝐞𝐥𝐢𝐦𝐢𝐧𝐚𝐫 𝐒𝐡𝐨𝐩𝐩𝐢𝐧𝐠𝐂𝐚𝐫𝐭 }===============
+function ClickSendButton(){
+
+    //============ Enviar productos si el usuario está registrado ============
+    if(ShoppingCart.length != 0){
+
+        const SaveLocal = (key, value) => { localStorage.setItem(key, value) };
+        SaveLocal("Compra reciente", JSON.stringify(ShoppingCart));
+        localStorage.getItem("Compra reciente");
+        console.log("================= Compra reciente =================");
+        console.table(ShoppingCart);
+
+        Swal.fire(
+            '¡Enviado con éxito!',
+            'A partir de 30 segundos de llegará su paquete',
+            'success'
+        );
+
+        let TableProducts = Array.prototype.slice.call(document.getElementsByClassName("ShoppingCart__ContainerTbody"));
+
+        for(element of TableProducts){
+            element.remove();
+        }  
+            
+        ShoppingCart.splice(0, 23);
+        console.table(ShoppingCart);
+        FinalPrice.innerHTML = "";
+
+        setTimeout(()=>{
+
+            Swal.fire(
+                '¡Enviado con éxito!',
+                'El paquete que reservó a ha sido entregado',
+                'success'
+            );
+        }, 10000);
+    }
+    //============ Enviar productos si el usuario está registrado ============
+
+
+    //============ Si no está registrado has esto ============
+    else{
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Debes de ingresar productos en el carro para poder enviar',
+        });
+    }
+    //============ Si no está registrado has esto ============
+}
+
+
+
+function ClickDeleteButton(){
+    //============ Borrar todos los productos ============
+    let TableProducts = Array.prototype.slice.call(document.getElementsByClassName("ShoppingCart__ContainerTbody"));
+
+    for(element of TableProducts){
+        element.remove();
+    }  
+        
+    ShoppingCart.splice(0, 23);
+    console.table(ShoppingCart);
+    FinalPrice.innerHTML = "";
+
+    Swal.fire(
+        '¡Borrado con éxito!',
+        'Los productos del carro fueron borrados con éxito',
+        'success'
+    );
+    //============ Borrar todos los productos ============
+}
+//==============={ 𝐁𝐨𝐭𝐨𝐧𝐞𝐬 𝐝𝐞 𝐞𝐧𝐯𝐢𝐚𝐫 𝐲 𝐞𝐥𝐢𝐦𝐢𝐧𝐚𝐫 𝐒𝐡𝐨𝐩𝐩𝐢𝐧𝐠𝐂𝐚𝐫𝐭 }===============
