@@ -1,0 +1,153 @@
+// ========== 𝐅𝐨𝐧𝐭-𝐟𝐚𝐜𝐞 ==========
+@font-face {
+    font-family: "FontR";
+    src: url("../Fonts/RomanSerif.ttf");
+}
+
+@font-face {
+    font-family: "FontT";
+    src: url("../Fonts/TangoSans_Italic.ttf");
+}
+// ========== 𝐅𝐨𝐧𝐭-𝐟𝐚𝐜𝐞 ==========
+
+
+// ========== 𝐌𝐢𝐱𝐢𝐧𝐬 ==========
+/* @mixin TopBorders{  
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+@mixin BottomBorders{   
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+@mixin TopBordersFractions{  
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+@mixin BottomBordersFractions{   
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+@mixin TitleForm{    
+    font-size: 25px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+@mixin SectionForms{    
+    height: 35px;
+    width: 300px;
+    margin-top: 5px;
+    margin-left: 15px;
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: rgb(206, 206, 206);
+}
+
+@mixin SectionForms2{    
+    height: 130px;
+    width: 400px;
+    margin-top: 5px;
+    margin-left: 15px;
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: rgb(206, 206, 206);
+}
+
+@mixin SectionForms3{   
+    height: 170px;
+    width: 400px;
+    margin-top: 5px;
+    margin-left: 15px;
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: rgb(206, 206, 206);
+}
+
+
+@mixin Text{    
+    margin-left: 5px;
+}
+
+@mixin TextF{   
+    margin-left: 5px;
+    margin-top: 6px;
+}
+
+@mixin TextPrice{   
+    margin-left: 140px;
+    margin-top: 6px;
+}
+
+@mixin FontTitle{   
+    font-family: "FontT";
+    font-size: 23px;
+}
+
+@mixin FontText{  
+    font-family: "FontP";
+    font-size: 15px;
+} */
+
+@mixin Bg{                     
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@mixin TopBorders{  
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+@mixin BottomBorders{   
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+@mixin cards{ 
+    height: 250px;
+    width: 210px;
+    border-radius: 30px;
+    background-image: linear-gradient(to bottom, rgb(209, 209, 209) 63%, rgb(180, 175, 175));
+}
+
+@mixin ColumnText{ //@include ColumnText
+    text-align: center;
+    position: relative;
+    top: 8px;
+    font-family: "FontT";
+    font-weight: bold;
+}
+
+@mixin ButtonsShoppingCart{  //@include ButtonsShoppingCart
+    height: 35px;
+    width: 35px;
+    margin-top: 9px;
+    border-radius: 10px;
+}
+
+@mixin PlusMinusButtonText{ //@include PlusMinusButtonText;
+    font-family: "FontT";
+    font-weight: bold;
+    font-size: 17px;
+    position: relative;
+    top: 5px;
+    right: 1px;
+}
+// ========== 𝐌𝐢𝐱𝐢𝐧𝐬 ==========
+
+
+// ========== 𝐌𝐚𝐩𝐬 ==========
+
+$ShoppingCart:(   
+    PlusButton: rgb(9, 255, 38), 
+    MinusButton: rgb(214, 9, 9)
+);
+// ========== 𝐌𝐚𝐩𝐬 ==========
+
+
