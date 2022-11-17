@@ -1,0 +1,916 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0; }
+
+@font-face {
+  font-family: "FontR";
+  src: url("../Fonts/RomanSerif.ttf"); }
+
+@font-face {
+  font-family: "FontT";
+  src: url("../Fonts/TangoSans_Italic.ttf"); }
+
+/* @mixin TopBorders{  
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+@mixin BottomBorders{   
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+@mixin TopBordersFractions{  
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+@mixin BottomBordersFractions{   
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+@mixin TitleForm{    
+    font-size: 25px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+@mixin SectionForms{    
+    height: 35px;
+    width: 300px;
+    margin-top: 5px;
+    margin-left: 15px;
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: rgb(206, 206, 206);
+}
+
+@mixin SectionForms2{    
+    height: 130px;
+    width: 400px;
+    margin-top: 5px;
+    margin-left: 15px;
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: rgb(206, 206, 206);
+}
+
+@mixin SectionForms3{   
+    height: 170px;
+    width: 400px;
+    margin-top: 5px;
+    margin-left: 15px;
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: rgb(206, 206, 206);
+}
+
+
+@mixin Text{    
+    margin-left: 5px;
+}
+
+@mixin TextF{   
+    margin-left: 5px;
+    margin-top: 6px;
+}
+
+@mixin TextPrice{   
+    margin-left: 140px;
+    margin-top: 6px;
+}
+
+@mixin FontTitle{   
+    font-family: "FontT";
+    font-size: 23px;
+}
+
+@mixin FontText{  
+    font-family: "FontP";
+    font-size: 15px;
+} */
+.content {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-areas: " content__header" " content__menu" " content__main" " content__footer";
+  grid-template-rows: 70px 35px 20fr 70px; }
+  .content .content__header {
+    grid-area: content__header;
+    background-image: linear-gradient(to right, #39f6e6 30%, #7cb6f0); }
+    .content .content__header .header__LogoHeader {
+      height: 65px;
+      width: 300px;
+      background-image: url("../IMG/LogoHeaderMarketPlus.png");
+      background-color: rgba(174, 173, 173, 0);
+      position: relative;
+      left: 10px;
+      top: 4px; }
+  .content .content__menu {
+    grid-area: content__menu;
+    background-color: #545353;
+    /* display: flex;
+        justify-content: space-around; */
+    display: grid;
+    grid-template-areas: " menu__column1 menu__column2";
+    grid-template-columns: 1fr 1fr;
+    /* .menu__categories{
+            color: white;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        .column2__link{
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+
+            .link__title{
+                font-size: 25px;
+            }
+        } */ }
+    .content .content__menu .menu__column1 {
+      grid-area: menu__column1;
+      background-color: rgba(0, 183, 255, 0); }
+      .content .content__menu .menu__column1 .column1__categories {
+        color: white;
+        text-align: center;
+        font-size: 25px;
+        cursor: pointer;
+        font-family: "FontT";
+        position: relative;
+        top: 3px; }
+    .content .content__menu .menu__column1:hover {
+      background-color: #717171; }
+    .content .content__menu .menu__column2 {
+      grid-area: menu__column2;
+      background-color: rgba(0, 94, 255, 0); }
+      .content .content__menu .menu__column2 .column2__link {
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+        font-family: "FontT";
+        position: relative;
+        top: 3px; }
+        .content .content__menu .menu__column2 .column2__link .link__title {
+          text-align: center;
+          font-size: 25px; }
+    .content .content__menu .menu__column2:hover {
+      background-color: #717171; }
+  .content .content__main {
+    grid-area: content__main;
+    background-image: linear-gradient(to bottom, #dcfcfc 23%, rgba(37, 107, 237, 0.606));
+    padding-bottom: 20px; }
+    .content .content__main .main__SubMenu {
+      height: 70px;
+      width: 100%;
+      background-color: rgba(62, 114, 247, 0.407); }
+      .content .content__main .main__SubMenu .SubMenu__ContainerFlex {
+        display: flex;
+        justify-content: space-around; }
+        .content .content__main .main__SubMenu .SubMenu__ContainerFlex .ContainerFlex__ButtonsCategories {
+          height: 60px;
+          width: 200px;
+          margin-top: 5px;
+          border-radius: 15px;
+          cursor: pointer;
+          background-color: rgba(89, 178, 251, 0.961); }
+          .content .content__main .main__SubMenu .SubMenu__ContainerFlex .ContainerFlex__ButtonsCategories .ButtonsCategories__Text {
+            color: #2b3753;
+            font-size: 17px;
+            font-family: "FontT";
+            font-weight: bold;
+            position: relative;
+            top: 5px; }
+    .content .content__main .main__none {
+      display: none; }
+    .content .content__main .main__visible {
+      display: block; }
+    .content .content__main .ContainerCards {
+      /* height: 1160px;
+            width: 100%; */
+      background-color: rgba(255, 0, 0, 0);
+      /* display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around; */ }
+      .content .content__main .ContainerCards .SubContainerCards {
+        /* height: 1160px;
+                width: 100%; */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around; }
+        .content .content__main .ContainerCards .SubContainerCards .ContainerCards__Card {
+          height: 250px;
+          width: 210px;
+          border-radius: 30px;
+          background-image: linear-gradient(to bottom, #d1d1d1 63%, #b4afaf);
+          margin-left: 10px;
+          position: relative;
+          top: 10px;
+          cursor: pointer;
+          margin-top: 20px; }
+          .content .content__main .ContainerCards .SubContainerCards .ContainerCards__Card .Card__ImgCard0 {
+            height: 140px;
+            width: 100%;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            background-image: url("../IMG/IMG_Hogar/Silla de oficina[1].png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: blue; }
+          .content .content__main .ContainerCards .SubContainerCards .ContainerCards__Card .Card__ImgCard1 {
+            height: 140px;
+            width: 100%;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            background-image: url("../IMG/IMG_Hogar/Lámpara de escritorio[2].png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: blue; }
+          .content .content__main .ContainerCards .SubContainerCards .ContainerCards__Card .Card__ImgCard2 {
+            height: 140px;
+            width: 100%;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            background-image: url("../IMG/IMG_Hogar/Litera[3].jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: blue; }
+          .content .content__main .ContainerCards .SubContainerCards .ContainerCards__Card .Card__ImgCard3 {
+            height: 140px;
+            width: 100%;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            background-image: url("../IMG/IMG_Hogar/Silla gamer[4].jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: blue; }
+          .content .content__main .ContainerCards .SubContainerCards .ContainerCards__Card .Card__ImgCard4 {
+            height: 140px;
+            width: 100%;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            background-image: url("../IMG/IMG_Hogar/Mueble[5].jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: blue; }
+          .content .content__main .ContainerCards .SubContainerCards .ContainerCards__Card .Card__ImgCard5 {
+            height: 140px;
+            width: 100%;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            background-image: url("../IMG/IMG_Hogar/Juego de comedor[6].jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: blue; }
+          .content .content__main .ContainerCards .SubContainerCards .ContainerCards__Card .Card__ImgCard6 {
+            height: 140px;
+            width: 100%;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            background-image: url("../IMG/IMG_Hogar/Estantería[7].jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: blue; }
+          .content .content__main .ContainerCards .SubContainerCards .ContainerCards__Card .Card__ImgCard7 {
+            height: 140px;
+            width: 100%;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            background-image: url("../IMG/IMG_Hogar/Closet[8].jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: blue; }
+          .content .content__main .ContainerCards .SubContainerCards .ContainerCards__Card .Card__ImgCard8 {
+            height: 140px;
+            width: 100%;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            background-image: url("../IMG/IMG_Cocina/Licuadora[1].jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: blue; }
+          .content .content__main .ContainerCards .SubContainerCards .ContainerCards__Card .Card__ImgCard9 {
+            height: 140px;
+            width: 100%;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            background-image: url("../IMG/IMG_Cocina/Microondas[2].jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: blue; }
+          .content .content__main .ContainerCards .SubContainerCards .ContainerCards__Card .Card__ImgCard10 {
+            height: 140px;
+            width: 100%;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            background-image: url("../IMG/IMG_Cocina/Horno[3].jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: blue; }
+          .content .content__main .ContainerCards .SubContainerCards .ContainerCards__Card .Card__ImgCard11 {
+            height: 140px;
+            width: 100%;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            background-image: url("../IMG/IMG_Cocina/Juego de cubiertos[4].jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: blue; }
+          .content .content__main .ContainerCards .SubContainerCards .ContainerCards__Card .Card__ImgCard12 {
+            height: 140px;
+            width: 100%;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            background-image: url("../IMG/IMG_Cocina/Juego de utencilios[5].jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: blue; }
+          .content .content__main .ContainerCards .SubContainerCards .ContainerCards__Card .Card__ImgCard13 {
+            height: 140px;
+            width: 100%;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            background-image: url("../IMG/IMG_Cocina/Batidora[6].jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: blue; }
+          .content .content__main .ContainerCards .SubContainerCards .ContainerCards__Card .Card__ImgCard14 {
+            height: 140px;
+            width: 100%;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            background-image: url("../IMG/IMG_Cocina/Cafetera[7].jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: blue; }
+          .content .content__main .ContainerCards .SubContainerCards .ContainerCards__Card .Card__ImgCard15 {
+            height: 140px;
+            width: 100%;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            background-image: url("../IMG/IMG_Cocina/Mortero de marmol[8].jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: blue; }
+          .content .content__main .ContainerCards .SubContainerCards .ContainerCards__Card .Card__ImgCard16 {
+            height: 140px;
+            width: 100%;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            background-image: url("../IMG/IMG_Electrodomesticos/Audífonos Inalámbricos[1].png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: blue; }
+          .content .content__main .ContainerCards .SubContainerCards .ContainerCards__Card .Card__ImgCard17 {
+            height: 140px;
+            width: 100%;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            background-image: url("../IMG/IMG_Electrodomesticos/Regleta[2].jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: blue; }
+          .content .content__main .ContainerCards .SubContainerCards .ContainerCards__Card .Card__ImgCard18 {
+            height: 140px;
+            width: 100%;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            background-image: url("../IMG/IMG_Electrodomesticos/Audífonos[3].png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: blue; }
+          .content .content__main .ContainerCards .SubContainerCards .ContainerCards__Card .Card__ImgCard19 {
+            height: 140px;
+            width: 100%;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            background-image: url("../IMG/IMG_Electrodomesticos/Aro De Luz Led[4].png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: blue; }
+          .content .content__main .ContainerCards .SubContainerCards .ContainerCards__Card .Card__ImgCard20 {
+            height: 140px;
+            width: 100%;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            background-image: url("../IMG/IMG_Electrodomesticos/Joystick[5].png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: blue; }
+          .content .content__main .ContainerCards .SubContainerCards .ContainerCards__Card .Card__ImgCard21 {
+            height: 140px;
+            width: 100%;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            background-image: url("../IMG/IMG_Electrodomesticos/Cornetas[6].png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: blue; }
+          .content .content__main .ContainerCards .SubContainerCards .ContainerCards__Card .Card__ImgCard22 {
+            height: 140px;
+            width: 100%;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            background-image: url("../IMG/IMG_Electrodomesticos/Batería Portátil[7].jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: blue; }
+          .content .content__main .ContainerCards .SubContainerCards .ContainerCards__Card .Card__ImgCard23 {
+            height: 140px;
+            width: 100%;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            background-image: url("../IMG/IMG_Electrodomesticos/Reloj inteligente[8].png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: blue; }
+          .content .content__main .ContainerCards .SubContainerCards .ContainerCards__Card .Card__TitleCard {
+            font-size: 18px;
+            margin-left: 2px;
+            position: relative;
+            top: 5px;
+            font-family: "FontT";
+            font-weight: bold; }
+          .content .content__main .ContainerCards .SubContainerCards .ContainerCards__Card .Card__Qualification {
+            font-size: 30px;
+            margin-left: 2px;
+            position: relative;
+            bottom: 34px;
+            color: black;
+            -webkit-text-stroke: 1px black; }
+          .content .content__main .ContainerCards .SubContainerCards .ContainerCards__Card .Card__PriceCard {
+            font-size: 27px;
+            position: relative;
+            bottom: 60px;
+            text-align: center;
+            font-family: "FontT";
+            color: #23f023;
+            text-shadow: -1px -1px 1px #000, 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000;
+            -webkit-text-stroke: 1px black; }
+    .content .content__main .main__ContainerForm {
+      height: 110px;
+      width: 100%;
+      margin-top: 15px;
+      background-color: rgba(255, 166, 0, 0);
+      display: flex;
+      justify-content: center; }
+      .content .content__main .main__ContainerForm .ContainerForm__SubContainer {
+        height: 105px;
+        width: 600px;
+        border-radius: 30px;
+        background-color: rgba(173, 168, 168, 0.434);
+        border: solid black 3px;
+        display: grid;
+        grid-template-areas: " SubContainer__Row1" " SubContainer__Row2" " SubContainer__Row3";
+        grid-template-rows: 1fr 1fr 1fr;
+        /* .SubContainer__Row3{
+                    grid-area: SubContainer__Row3;
+                    background-color: rgba(106, 108, 108, 0);
+                    border-bottom-left-radius: 30px;
+                    border-bottom-right-radius: 30px;
+                    display: grid;
+                    grid-template-areas: 
+                    " Row3__Column1 Row3__Column2";
+                    grid-template-columns: 260px 1fr;
+
+                    .Row3__Column1{
+                        grid-area: Row3__Column1;
+                        background-color: rgba(255, 0, 0, 0);
+
+                        .Column1__Title3{
+                            font-size: 30px;
+                            margin-top: 5px;
+                            margin-left: 10px;
+                        }
+                    }
+
+                    .Row3__Column2{
+                        grid-area: Row3__Column2;
+                        background-color: rgba(0, 170, 255, 0);
+
+                        .Column__Select{
+                            height: 35px;
+                            width: 250px;
+                            border-radius: 30px;
+                            margin-top: 10px;
+                            margin-left: 10px;
+                            border: solid black 2px;
+                        }
+                    }
+                } */ }
+        .content .content__main .main__ContainerForm .ContainerForm__SubContainer .SubContainer__Row1 {
+          grid-area: SubContainer__Row1;
+          background-color: rgba(106, 108, 108, 0);
+          border-top-left-radius: 30px;
+          border-top-right-radius: 30px;
+          display: grid;
+          grid-template-areas: " Row1__Column1 Row1__Column2";
+          grid-template-columns: 145px 1fr; }
+          .content .content__main .main__ContainerForm .ContainerForm__SubContainer .SubContainer__Row1 .Row1__Column1 {
+            grid-area: Row1__Column1;
+            background-color: rgba(255, 0, 0, 0); }
+            .content .content__main .main__ContainerForm .ContainerForm__SubContainer .SubContainer__Row1 .Row1__Column1 .Column1__Title1 {
+              font-size: 30px;
+              margin-top: 10px;
+              margin-left: 12px;
+              font-family: "FontT"; }
+          .content .content__main .main__ContainerForm .ContainerForm__SubContainer .SubContainer__Row1 .Row1__Column2 {
+            grid-area: Row1__Column2;
+            background-color: rgba(0, 170, 255, 0); }
+            .content .content__main .main__ContainerForm .ContainerForm__SubContainer .SubContainer__Row1 .Row1__Column2 .Column2__Text1 {
+              font-size: 30px;
+              margin-top: 10px;
+              font-family: "FontT"; }
+        .content .content__main .main__ContainerForm .ContainerForm__SubContainer .SubContainer__Row2 {
+          grid-area: SubContainer__Row2;
+          background-color: rgba(169, 167, 167, 0);
+          display: grid;
+          grid-template-areas: " Row2__Column1 Row2__Column2";
+          grid-template-columns: 110px 1fr; }
+          .content .content__main .main__ContainerForm .ContainerForm__SubContainer .SubContainer__Row2 .Row2__Column1 {
+            grid-area: Row2__Column1;
+            background-color: rgba(255, 0, 0, 0); }
+            .content .content__main .main__ContainerForm .ContainerForm__SubContainer .SubContainer__Row2 .Row2__Column1 .Column1__Title2 {
+              font-size: 30px;
+              margin-top: 5px;
+              margin-left: 12px;
+              font-family: "FontT"; }
+          .content .content__main .main__ContainerForm .ContainerForm__SubContainer .SubContainer__Row2 .Row2__Column2 {
+            grid-area: Row2__Column2;
+            background-color: rgba(0, 170, 255, 0); }
+            .content .content__main .main__ContainerForm .ContainerForm__SubContainer .SubContainer__Row2 .Row2__Column2 .Column2__Text2 {
+              font-size: 30px;
+              margin-top: 5px;
+              font-family: "FontT"; }
+  .content .main__ShoppingCart {
+    background-color: rgba(143, 138, 138, 0);
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    margin-top: 2px; }
+    .content .main__ShoppingCart .ShoppingCart__ContainerTheader {
+      background-color: #434141;
+      width: 1300px;
+      border: solid black 4px; }
+      .content .main__ShoppingCart .ShoppingCart__ContainerTheader .ContainerTheader__FirstRow {
+        background-color: rgba(139, 139, 139, 0);
+        display: flex;
+        justify-content: space-around;
+        padding-right: 8px; }
+        .content .main__ShoppingCart .ShoppingCart__ContainerTheader .ContainerTheader__FirstRow .FirstRow__Text {
+          font-family: "FontT";
+          color: white;
+          position: relative;
+          top: 8px; }
+        .content .main__ShoppingCart .ShoppingCart__ContainerTheader .ContainerTheader__FirstRow .icons8-basura {
+          display: inline-block;
+          width: 40px;
+          height: 38px;
+          margin-top: 7px;
+          background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNjQiIGhlaWdodD0iNjQiCnZpZXdCb3g9IjAgMCA2NCA2NCI+CjxwYXRoIGQ9Ik0gMjggNiBDIDI1Ljc5MSA2IDI0IDcuNzkxIDI0IDEwIEwgMjQgMTIgTCAyMy41OTk2MDkgMTIgTCAxMCAxNCBMIDEwIDE3IEwgNTQgMTcgTCA1NCAxNCBMIDQwLjQwMDM5MSAxMiBMIDQwIDEyIEwgNDAgMTAgQyA0MCA3Ljc5MSAzOC4yMDkgNiAzNiA2IEwgMjggNiB6IE0gMjggMTAgTCAzNiAxMCBMIDM2IDEyIEwgMjggMTIgTCAyOCAxMCB6IE0gMTIgMTkgTCAxNC43MDExNzIgNTIuMzIyMjY2IEMgMTQuODY5MTcyIDU0LjM5OTI2NiAxNi42MDU0NTMgNTYgMTguNjg5NDUzIDU2IEwgNDUuMzEyNSA1NiBDIDQ3LjM5NjUgNTYgNDkuMTI5ODI4IDU0LjQwMTIxOSA0OS4yOTg4MjggNTIuMzI0MjE5IEwgNTEuOTIzODI4IDIwIEwgMTIgMTkgeiBNIDIwIDI2IEMgMjEuMTA1IDI2IDIyIDI2Ljg5NSAyMiAyOCBMIDIyIDUxIEwgMTkgNTEgTCAxOCAyOCBDIDE4IDI2Ljg5NSAxOC44OTUgMjYgMjAgMjYgeiBNIDMyIDI2IEMgMzMuNjU3IDI2IDM1IDI3LjM0MyAzNSAyOSBMIDM1IDUxIEwgMjkgNTEgTCAyOSAyOSBDIDI5IDI3LjM0MyAzMC4zNDMgMjYgMzIgMjYgeiBNIDQ0IDI2IEMgNDUuMTA1IDI2IDQ2IDI2Ljg5NSA0NiAyOCBMIDQ1IDUxIEwgNDIgNTEgTCA0MiAyOCBDIDQyIDI2Ljg5NSA0Mi44OTUgMjYgNDQgMjYgeiI+PC9wYXRoPgo8L3N2Zz4=") 50% 50% no-repeat;
+          background-size: 100%;
+          filter: invert(100%) sepia(1%) saturate(4839%) hue-rotate(219deg) brightness(117%) contrast(100%); }
+    .content .main__ShoppingCart .ShoppingCart__ContainerTbody {
+      width: 1300px; }
+      .content .main__ShoppingCart .ShoppingCart__ContainerTbody .ContainerTbody__ProductRow {
+        display: grid;
+        grid-template-areas: " ProductRow__Colmn1 ProductRow__Colmn2 ProductRow__Colmn3 ProductRow__Colmn4 ProductRow__Colmn5 ProductRow__Colmn6";
+        grid-template-columns: 130px 450px 210px 220px 130px 1fr; }
+        .content .main__ShoppingCart .ShoppingCart__ContainerTbody .ContainerTbody__ProductRow .ProductRow__Colmn1 {
+          grid-area: ProductRow__Colmn1;
+          background-color: rgba(184, 13, 13, 0);
+          border-width: 0 4px 4px 4px;
+          border-style: solid;
+          border-color: black; }
+          .content .main__ShoppingCart .ShoppingCart__ContainerTbody .ContainerTbody__ProductRow .ProductRow__Colmn1 .ColmnText {
+            text-align: center;
+            position: relative;
+            top: 8px;
+            font-family: "FontT";
+            font-weight: bold; }
+        .content .main__ShoppingCart .ShoppingCart__ContainerTbody .ContainerTbody__ProductRow .ProductRow__Colmn2 {
+          grid-area: ProductRow__Colmn2;
+          background-color: rgba(0, 149, 255, 0);
+          border-width: 0 4px 4px 0px;
+          border-style: solid;
+          border-color: black; }
+          .content .main__ShoppingCart .ShoppingCart__ContainerTbody .ContainerTbody__ProductRow .ProductRow__Colmn2 .ColmnText {
+            text-align: center;
+            position: relative;
+            top: 8px;
+            font-family: "FontT";
+            font-weight: bold; }
+        .content .main__ShoppingCart .ShoppingCart__ContainerTbody .ContainerTbody__ProductRow .ProductRow__Colmn3 {
+          grid-area: ProductRow__Colmn3;
+          background-color: rgba(184, 13, 13, 0);
+          border-width: 0 4px 4px 0px;
+          border-style: solid;
+          border-color: black;
+          display: flex;
+          justify-content: center; }
+          .content .main__ShoppingCart .ShoppingCart__ContainerTbody .ContainerTbody__ProductRow .ProductRow__Colmn3 .ColmnText {
+            text-align: center;
+            position: relative;
+            top: 8px;
+            font-family: "FontT";
+            font-weight: bold; }
+          .content .main__ShoppingCart .ShoppingCart__ContainerTbody .ContainerTbody__ProductRow .ProductRow__Colmn3 .PlusButton {
+            height: 35px;
+            width: 35px;
+            margin-top: 9px;
+            border-radius: 10px;
+            margin-left: 10px;
+            background-color: #09ff26; }
+            .content .main__ShoppingCart .ShoppingCart__ContainerTbody .ContainerTbody__ProductRow .ProductRow__Colmn3 .PlusButton .PlusButton__Text {
+              font-family: "FontT";
+              font-weight: bold;
+              font-size: 17px;
+              position: relative;
+              top: 5px;
+              right: 1px; }
+          .content .main__ShoppingCart .ShoppingCart__ContainerTbody .ContainerTbody__ProductRow .ProductRow__Colmn3 .MinusButton {
+            height: 35px;
+            width: 35px;
+            margin-top: 9px;
+            border-radius: 10px;
+            margin-left: 5px;
+            background-color: #d60909; }
+            .content .main__ShoppingCart .ShoppingCart__ContainerTbody .ContainerTbody__ProductRow .ProductRow__Colmn3 .MinusButton .MinusButton__Text {
+              font-family: "FontT";
+              font-weight: bold;
+              font-size: 17px;
+              position: relative;
+              top: 5px;
+              right: 1px; }
+        .content .main__ShoppingCart .ShoppingCart__ContainerTbody .ContainerTbody__ProductRow .ProductRow__Colmn4 {
+          grid-area: ProductRow__Colmn4;
+          background-color: rgba(0, 149, 255, 0);
+          border-width: 0 4px 4px 0px;
+          border-style: solid;
+          border-color: black; }
+          .content .main__ShoppingCart .ShoppingCart__ContainerTbody .ContainerTbody__ProductRow .ProductRow__Colmn4 .ColmnText {
+            text-align: center;
+            position: relative;
+            top: 8px;
+            font-family: "FontT";
+            font-weight: bold; }
+        .content .main__ShoppingCart .ShoppingCart__ContainerTbody .ContainerTbody__ProductRow .ProductRow__Colmn5 {
+          grid-area: ProductRow__Colmn5;
+          background-color: rgba(184, 13, 13, 0);
+          border-width: 0 4px 4px 0px;
+          border-style: solid;
+          border-color: black; }
+          .content .main__ShoppingCart .ShoppingCart__ContainerTbody .ContainerTbody__ProductRow .ProductRow__Colmn5 .ColmnText {
+            text-align: center;
+            position: relative;
+            top: 8px;
+            font-family: "FontT";
+            font-weight: bold; }
+        .content .main__ShoppingCart .ShoppingCart__ContainerTbody .ContainerTbody__ProductRow .ProductRow__Colmn6 {
+          grid-area: ProductRow__Colmn6;
+          background-color: rgba(0, 149, 255, 0);
+          display: flex;
+          justify-content: center;
+          border-width: 0 4px 4px 0px;
+          border-style: solid;
+          border-color: black; }
+          .content .main__ShoppingCart .ShoppingCart__ContainerTbody .ContainerTbody__ProductRow .ProductRow__Colmn6 .icons8-basura {
+            display: inline-block;
+            width: 40px;
+            height: 38px;
+            cursor: pointer;
+            position: relative;
+            top: 8px;
+            background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNjQiIGhlaWdodD0iNjQiCnZpZXdCb3g9IjAgMCA2NCA2NCI+CjxwYXRoIGQ9Ik0gMjggNiBDIDI1Ljc5MSA2IDI0IDcuNzkxIDI0IDEwIEwgMjQgMTIgTCAyMy41OTk2MDkgMTIgTCAxMCAxNCBMIDEwIDE3IEwgNTQgMTcgTCA1NCAxNCBMIDQwLjQwMDM5MSAxMiBMIDQwIDEyIEwgNDAgMTAgQyA0MCA3Ljc5MSAzOC4yMDkgNiAzNiA2IEwgMjggNiB6IE0gMjggMTAgTCAzNiAxMCBMIDM2IDEyIEwgMjggMTIgTCAyOCAxMCB6IE0gMTIgMTkgTCAxNC43MDExNzIgNTIuMzIyMjY2IEMgMTQuODY5MTcyIDU0LjM5OTI2NiAxNi42MDU0NTMgNTYgMTguNjg5NDUzIDU2IEwgNDUuMzEyNSA1NiBDIDQ3LjM5NjUgNTYgNDkuMTI5ODI4IDU0LjQwMTIxOSA0OS4yOTg4MjggNTIuMzI0MjE5IEwgNTEuOTIzODI4IDIwIEwgMTIgMTkgeiBNIDIwIDI2IEMgMjEuMTA1IDI2IDIyIDI2Ljg5NSAyMiAyOCBMIDIyIDUxIEwgMTkgNTEgTCAxOCAyOCBDIDE4IDI2Ljg5NSAxOC44OTUgMjYgMjAgMjYgeiBNIDMyIDI2IEMgMzMuNjU3IDI2IDM1IDI3LjM0MyAzNSAyOSBMIDM1IDUxIEwgMjkgNTEgTCAyOSAyOSBDIDI5IDI3LjM0MyAzMC4zNDMgMjYgMzIgMjYgeiBNIDQ0IDI2IEMgNDUuMTA1IDI2IDQ2IDI2Ljg5NSA0NiAyOCBMIDQ1IDUxIEwgNDIgNTEgTCA0MiAyOCBDIDQyIDI2Ljg5NSA0Mi44OTUgMjYgNDQgMjYgeiI+PC9wYXRoPgo8L3N2Zz4=") 50% 50% no-repeat;
+            background-size: 100%;
+            filter: invert(11%) sepia(99%) saturate(7497%) hue-rotate(19deg) brightness(94%) contrast(117%); }
+    .content .main__ShoppingCart .TbodyColor {
+      background-color: #b6b1b1; }
+  .content .main__TableFinalprice {
+    background-color: rgba(128, 128, 128, 0);
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    margin-top: 2px; }
+    .content .main__TableFinalprice .TableFinalprice__RowFinalprice {
+      background-color: #434141;
+      border: solid black 4px;
+      width: 1300px;
+      display: grid;
+      grid-template-areas: " RowFinalprice__Colmn1 RowFinalprice__Colmn2";
+      grid-template-columns: 400px 1fr; }
+      .content .main__TableFinalprice .TableFinalprice__RowFinalprice .RowFinalprice__Colmn1 {
+        grid-area: RowFinalprice__Colmn1;
+        background-color: rgba(255, 0, 0, 0); }
+        .content .main__TableFinalprice .TableFinalprice__RowFinalprice .RowFinalprice__Colmn1 .Colmn1__text {
+          color: white;
+          margin-left: 30px;
+          margin-top: 10px;
+          font-family: "FontT"; }
+      .content .main__TableFinalprice .TableFinalprice__RowFinalprice .RowFinalprice__Colmn2 {
+        grid-area: RowFinalprice__Colmn2;
+        background-color: rgba(0, 123, 255, 0); }
+        .content .main__TableFinalprice .TableFinalprice__RowFinalprice .RowFinalprice__Colmn2 .Colmn2__text {
+          color: white;
+          text-align: right;
+          margin-right: 50px;
+          margin-top: 10px;
+          font-family: "FontT"; }
+  .content .main__SectionButtons {
+    height: 125px;
+    width: 100%;
+    background-color: rgba(0, 221, 255, 0);
+    display: grid;
+    justify-content: center;
+    margin-top: 20px; }
+    .content .main__SectionButtons .SectionButtons__SendButton {
+      height: 60px;
+      width: 200px;
+      border-radius: 20px;
+      background-color: greenyellow; }
+      .content .main__SectionButtons .SectionButtons__SendButton .SendButton__Text {
+        font-size: 25px;
+        position: relative;
+        top: 5px;
+        font-family: "FontT"; }
+    .content .main__SectionButtons .SectionButtons__DeleteButton {
+      height: 60px;
+      width: 200px;
+      border-radius: 20px;
+      /* position: relative;
+            bottom: 30px; */
+      background-color: #f61f1f; }
+      .content .main__SectionButtons .SectionButtons__DeleteButton .DeleteButton__Text {
+        font-size: 25px;
+        position: relative;
+        top: 5px;
+        font-family: "FontT"; }
+  .content .content__footer {
+    grid-area: content__footer;
+    background-color: black; }
+    .content .content__footer .footer__LogoFooter {
+      height: 65px;
+      width: 400px;
+      background-image: url("../IMG/LogoFooterMarketPlus.png");
+      background-color: rgba(174, 173, 173, 0);
+      position: relative;
+      left: 10px;
+      top: 2px; }
+
+.MainCheckIn {
+  background-image: linear-gradient(to bottom, #74c0fd 23%, rgba(37, 107, 237, 0.806));
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow-y: hidden;
+  justify-content: center; }
+  .MainCheckIn .MainCheckIn__ContainerCheckIn {
+    height: 450px;
+    width: 400px;
+    position: relative;
+    top: 150px;
+    background-color: rgba(125, 121, 121, 0.469);
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.108);
+    border-radius: 30px;
+    display: grid;
+    grid-template-areas: " ContainerCheckIn__Row1" " ContainerCheckIn__Row2" " ContainerCheckIn__Row3" " ContainerCheckIn__Row4" " ContainerCheckIn__Row5";
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; }
+    .MainCheckIn .MainCheckIn__ContainerCheckIn .ContainerCheckIn__Row1 {
+      grid-area: ContainerCheckIn__Row1;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      background-color: rgba(0, 94, 255, 0); }
+      .MainCheckIn .MainCheckIn__ContainerCheckIn .ContainerCheckIn__Row1 .Row1__Title {
+        font-size: 40px;
+        text-align: center;
+        margin-top: 20px;
+        font-family: "FontT"; }
+    .MainCheckIn .MainCheckIn__ContainerCheckIn .ContainerCheckIn__Row2 {
+      grid-area: ContainerCheckIn__Row2;
+      background-color: rgba(0, 213, 255, 0); }
+      .MainCheckIn .MainCheckIn__ContainerCheckIn .ContainerCheckIn__Row2 .Row2__Title {
+        margin-left: 5px;
+        position: relative;
+        top: 5px;
+        font-family: "FontT"; }
+      .MainCheckIn .MainCheckIn__ContainerCheckIn .ContainerCheckIn__Row2 .Title__InputText {
+        height: 35px;
+        width: 300px;
+        margin-left: 5px;
+        position: relative;
+        bottom: 20px;
+        border-radius: 10px;
+        border: solid black 2px; }
+      .MainCheckIn .MainCheckIn__ContainerCheckIn .ContainerCheckIn__Row2 ::placeholder {
+        color: #848485;
+        position: relative;
+        left: 5px;
+        bottom: 1px;
+        font-family: "FontR";
+        font-weight: bold; }
+    .MainCheckIn .MainCheckIn__ContainerCheckIn .ContainerCheckIn__Row3 {
+      grid-area: ContainerCheckIn__Row3;
+      background-color: rgba(0, 94, 255, 0); }
+      .MainCheckIn .MainCheckIn__ContainerCheckIn .ContainerCheckIn__Row3 .Row3__Title {
+        margin-left: 5px;
+        position: relative;
+        top: 5px;
+        font-family: "FontT"; }
+      .MainCheckIn .MainCheckIn__ContainerCheckIn .ContainerCheckIn__Row3 .Title__InputText {
+        height: 35px;
+        width: 300px;
+        margin-left: 5px;
+        position: relative;
+        bottom: 20px;
+        border-radius: 10px;
+        border: solid black 2px; }
+      .MainCheckIn .MainCheckIn__ContainerCheckIn .ContainerCheckIn__Row3 ::placeholder {
+        color: #848485;
+        position: relative;
+        left: 5px;
+        bottom: 1px;
+        font-family: "FontR";
+        font-weight: bold; }
+    .MainCheckIn .MainCheckIn__ContainerCheckIn .ContainerCheckIn__Row4 {
+      grid-area: ContainerCheckIn__Row4;
+      background-color: rgba(0, 213, 255, 0); }
+      .MainCheckIn .MainCheckIn__ContainerCheckIn .ContainerCheckIn__Row4 .Row4__Title {
+        margin-left: 5px;
+        position: relative;
+        top: 5px;
+        font-family: "FontT"; }
+      .MainCheckIn .MainCheckIn__ContainerCheckIn .ContainerCheckIn__Row4 .Title__InputText {
+        height: 35px;
+        width: 300px;
+        margin-left: 5px;
+        position: relative;
+        bottom: 20px;
+        border-radius: 10px;
+        border: solid black 2px; }
+      .MainCheckIn .MainCheckIn__ContainerCheckIn .ContainerCheckIn__Row4 ::placeholder {
+        color: #848485;
+        position: relative;
+        left: 5px;
+        bottom: 1px;
+        font-family: "FontR";
+        font-weight: bold; }
+    .MainCheckIn .MainCheckIn__ContainerCheckIn .ContainerCheckIn__Row5 {
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      grid-area: ContainerCheckIn__Row5;
+      background-color: rgba(0, 94, 255, 0);
+      display: flex;
+      justify-content: center;
+      /* .Title__InputText{
+                height: 35px;
+                margin-left: 5px;
+                position: relative;
+                bottom: 20px;
+                border-radius: 10px;
+            } */ }
+      .MainCheckIn .MainCheckIn__ContainerCheckIn .ContainerCheckIn__Row5 .Row5__Title {
+        margin-left: 5px;
+        position: relative;
+        top: 5px;
+        font-family: "FontT"; }
+      .MainCheckIn .MainCheckIn__ContainerCheckIn .ContainerCheckIn__Row5 .Row5__Send {
+        height: 35px;
+        width: 160px;
+        position: relative;
+        top: 10px;
+        border-radius: 50px;
+        background-color: #72fb72; }
+        .MainCheckIn .MainCheckIn__ContainerCheckIn .ContainerCheckIn__Row5 .Row5__Send .Send__link {
+          text-decoration: none; }
+          .MainCheckIn .MainCheckIn__ContainerCheckIn .ContainerCheckIn__Row5 .Row5__Send .Send__link .link__Text {
+            color: black;
+            position: relative;
+            top: 4px;
+            font-family: "FontT"; }
